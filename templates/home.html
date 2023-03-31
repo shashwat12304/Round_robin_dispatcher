@@ -1,0 +1,42 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>
+        Round-robin Dispatcher
+      </title>
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+      <style>
+        {% include 'style.css'%}
+      </style>
+    </head>
+    <body>
+      {%include 'nav.html'%}
+      <h1 class  = "text-center mt-4 mb-4">ROUND ROBIN DISPATCHER</h1>
+      <img class = "img-fluid" id ="banner" 
+    src="https://Roundrobindispatcher.shashwat12304.repl.co/static/web-header.jpg">
+      <div class = "container">
+      <h2 class = "text-center mt-4 mb-4"><u>An Introduction</u></h2>
+      <p class = "lead">A dispatcher is a component of an operating system that is responsible for managing and scheduling tasks or processes in the system. It is a critical part of the operating system's kernel, which controls the allocation of system resources such as CPU time, memory, and I/O operations to various tasks or processes.
+
+The dispatcher's main function is to manage the execution of tasks by deciding which task should be given the CPU time next, based on the scheduling algorithm implemented in the system. When a process or task is waiting for a resource or is blocked, the dispatcher switches the CPU's control to another process that is ready to execute. The dispatcher is responsible for switching between processes quickly and efficiently to ensure that the system is utilized effectively and no process is unnecessarily starved of resources.</p>
+            <center><img class = "img-fluid mt-4 mb-4" src ="https://Roundrobindispatcher.shashwat12304.repl.co/static/round-robin-intro.jpg"></center>  
+      <h2 class = "text-center mt-4 mb-4"><u>CLASSIFICATION</u></h2>
+        <center><img class = "img-fluid mt-4 mb-4" src ="https://Roundrobindispatcher.shashwat12304.repl.co/static/diff-os.webp"></center>
+      <h2 class = "text-center mt-4 mb-4"><u>ROUND-ROBIN ALGORITHM</u></h2>
+      <p class = "lead">Round-robin dispatching is a technique used in operating systems to manage the execution of processes on the CPU. It is closely related to round-robin scheduling, which is a CPU scheduling algorithm.<br>
+
+In round-robin dispatching, the CPU is assigned to execute each process for a fixed amount of time, called a time quantum. The operating system maintains a queue of processes waiting to execute, and the CPU is assigned to the first process in the queue. When a process has used up its time quantum, the operating system suspends its execution and adds it to the end of the queue. The next process in the queue is then executed for its allotted time quantum, and the process continues in a circular fashion until all processes have been executed.<br>
+
+Round-robin dispatching is used to provide fairness in process execution, as each process is given a fixed amount of CPU time before being suspended to allow other processes to execute. It is useful in systems that need to support multiple users and prioritize process execution based on a specific policy.<br>
+
+One potential drawback of round-robin dispatching is that if the time quantum is too short, it can result in significant overhead due to the frequent context switches between processes. Conversely, if the time quantum is too long, some processes may be starved of CPU time, leading to poor response times.</p>
+          <div class = "text-center">
+      <a class = "btn btn-primary btn-lg mb-4" href = "https://github.com/shashwat12304/Round_robin_dispatcher.git">Code </a>
+        </div>
+      {%include 'footer.html'%}
+    </body>
+  </html>
